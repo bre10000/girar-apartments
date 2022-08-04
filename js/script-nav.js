@@ -7,7 +7,7 @@ var theHeader = document.getElementById("hero").offsetHeight
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
-  if ( document.documentElement.scrollTop > 70) {
+  if ( document.documentElement.scrollTop > 400) {
     theNavigation.classList.add(stuck);
     theNavigationContainer.classList.add(stuck);
     spacer.classList.remove('is-hidden');

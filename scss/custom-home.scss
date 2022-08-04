@@ -1,75 +1,112 @@
 .main-banner {
-    height: calc(100vh - 55px);
+    height: calc(100vh);
     // width: 100%;
     background-image: url("../images/home/main-banner.jpg");
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    margin-top: -80px;
 }
-.our-team-section{
-    background-image: url("../images/home/our-team.jpg");
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-position-x: -200px;
-}
-.siema-image{
-    width: 320px;
-    height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-right: 10px;
+
+
+.reveal {
     position: relative;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    .after{
+    overflow: hidden;
+    height: 4rem;
+
+    span {
+        position: absolute;
+    }
+}
+
+.reveal-2 {
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+
+    span {
+        position: absolute;
+    }
+}
+
+.reveal-3 {
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+
+    span {
+        position: absolute;
+    }
+}
+
+.view {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    .panorama-view,
+    .living-room {
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        background-color: rgba(0, 0, 0, 0.137);
-        z-index: 0;
-    }
-    &.is-active {
-        .after{
-            content: '';
-            background-color: rgba(0, 0, 0, 0.336);
-        }
-        transform: scale(1.2);
-        z-index: 10;
-        h4{
-            bottom: 80%;
-            left: 0;
-        }
-        &:hover {
-            transform: scale(1.25)
-        }
-    }
-    &.is-invisible {
-        transform: scale(.2);
-        opacity: 0;
-        z-index: 0;
-        width: 0;
-        margin-right: 0;
-    }
-    h4{
-        position: absolute;
-        bottom: 10%;
-        left: 0;
-        z-index: 5;
-        transition: all .4s ease-in-out;
-    }
 
-    &:hover {
-        transform: scale(1.05)
     }
 }
-p.gray{
+
+#container {
+    opacity: 0;
+    position: absolute;
+
+    // svg,img {
+    //     position:absolute;
+    // }
+}
+
+.map.trigger6 {
+    position: relative;
+    height: 800px !important;
+    overflow: hidden;
+    text-align: center;
+
+    img.map {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.city-center {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    margin: 0;
+    max-width: 400px;
+    min-width: 300px;
+    height: 500px;
+    z-index: 10;
+    text-align: left;
+
+}
+
+#mapPath {
+    display: block;
+    position: absolute;
+
+    path {
+        stroke-dasharray: 2320;
+        stroke-dashoffset: 0;
+        //   animation: dash 10s linear;
+    }
+}
+
+
+p.gray {
     line-height: 1.7 !important;
 }
 
-p.light-gray{
+p.light-gray {
     line-height: 1.5 !important;
 }
 
@@ -79,22 +116,23 @@ p.light-gray{
     flex-wrap: wrap;
     margin: -1rem -1rem;
     padding-bottom: 3rem;
-  }
-  
-  .gallery-item {
+}
+
+.gallery-item {
     position: relative;
     flex: 1 0 22rem;
     margin: .2rem;
     margin-bottom: -0.2rem;
     color: #fff;
     cursor: pointer;
-  }
-  .gallery-item-info img {
+}
+
+.gallery-item-info img {
     width: 45px;
-  }
-  
-  .gallery-item:hover .gallery-item-info,
-  .gallery-item:focus .gallery-item-info {
+}
+
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,34 +141,124 @@ p.light-gray{
     width: 100%;
     height: 98%;
     background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .gallery-item-info {
+}
+
+.gallery-item-info {
     display: none;
-  }
+}
 
 
-@media screen and (max-width: 768px){
-    .pr-slider-col {
-        justify-content: start !important;
-    }
-    // .about-section-line {
-    //     justify-content: start !important;
-    // }
-    // .projects-section-line {
-    //     justify-content: start !important;
-    //     margin-left: 50px !important;
-    // }
-    .our-team-section-line {
-        justify-content: end !important;
-    }
-    .our-services-section-line{
-        justify-content: center !important;
-        margin-left: -150px;
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .view {
+
+        .panorama-view,
+        .living-room {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 100vh;
+            min-width: 200vh;
+            left: 50% !important;
+            margin-left: -50% !important;
+        }
     }
 
-    .our-team-image{
-        margin-left: -50%;
+    .city-center {
+        position: absolute;
+        top: 65%;
+        left: 10%;
     }
 
+
+}
+
+:root {
+    --lb3-widget-icon: url("https://girarapartments.com/images/home/main-banner-mobile.jpg");
+}
+
+@media screen and (max-width: 768px) {
+    .main-banner {
+        height: calc(100vh - 70px);
+        background-color: black;
+        background-image: var(--lb3-widget-icon);
+        background-size: cover;
+    }
+
+
+    .reveal,
+    .reveal-2,
+    .reveal-3 {
+        height: 2.8rem;
+    }
+
+    .view {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+
+        .living-room {
+            position: absolute;
+            top: 0;
+            min-height: 100vh;
+            min-width: 50vh !important;
+            left: 50% !important;
+            margin-left: -50% !important;
+        }
+
+        .panorama-view {
+            min-height: 100vh;
+            min-width: 70vh !important;
+            left: 50% !important;
+            margin-left: -50% !important;
+        }
+    }
+
+
+
+    .girar-calltoaction-phone {
+        flex-direction: column !important;
+    }
+
+}
+
+.masonry-grid {
+    /* It is split into 3 columns */
+    column-count: 3;
+
+    /* The space between columns */
+    column-gap: 1rem;
+
+    /* Misc */
+    width: 100%;
+}
+
+.masonry-grid__item {
+    /* Prevent a column from breaking into multiple columns */
+    break-inside: avoid;
+
+    /* Misc */
+    margin-bottom: 1rem;
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .main-banner {
+        height: calc(100vh - 70px);
+        background-color: black;
+        background-image: var(--lb3-widget-icon);
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 844px) and (orientation: portrait) {
+    .main-banner {
+        height: calc(100vh - 70px);
+        background-color: black;
+        background-image: var(--lb3-widget-icon);
+        background-size: cover;
+    }
 }

@@ -123,8 +123,7 @@ body {
 }
 
 .display, .display * {
-  font-family: "Inter", sans-serif;
-  letter-spacing: 0.2px;
+  font-family: "EB Garamond", sans-serif;
 }
 
 .has-border-right-gray {
@@ -151,6 +150,10 @@ a.gray:hover {
   font-weight: 600;
 }
 
+.has-background-success {
+  background-color: #10271c !important;
+}
+
 a.is-light {
   color: #000000 !important;
 }
@@ -166,13 +169,8 @@ a.is-light:active {
 body {
   width: 100% !important;
   overflow-x: hidden;
-  letter-spacing: 2px !important;
   padding: 0;
   margin: 0;
-}
-
-.letter-spacing-1 {
-  letter-spacing: 2px;
 }
 
 .gray {
@@ -248,8 +246,14 @@ body {
   border-bottom: 0.15px solid rgba(255, 255, 255, 0.2666666667) !important;
 }
 
+.is-size-0 {
+  font-size: 4rem !important;
+  line-height: 1;
+}
+
 .is-size-1 {
   font-size: 3rem !important;
+  line-height: 1;
 }
 
 .is-size-1.title {
@@ -258,6 +262,7 @@ body {
 
 .is-size-2 {
   font-size: 2em !important;
+  line-height: 1;
 }
 
 .is-size-2.has-text-weight-bold {
@@ -273,7 +278,7 @@ body {
 }
 
 .header {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -292,8 +297,17 @@ body {
   transition: width 0.5s ease;
 }
 #nav-logo.minimize {
-  width: 220px;
+  width: 120px;
   margin-top: -20px;
+}
+
+#nav-logo2 {
+  margin-right: 4rem;
+  margin-left: 1rem;
+  transition: width 0.5s ease;
+}
+#nav-logo2.minimize {
+  width: 120px;
 }
 
 #navbarBurger {
@@ -311,39 +325,68 @@ body {
 
 nav.navbar {
   width: 100%;
-  height: 80px;
+  height: 70px;
   min-height: 1.5rem !important;
+}
+
+#nav {
+  background-color: transparent !important;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav.is-fixed-top {
+  background-color: white !important;
+}
+
+#nav-container.is-fixed-top {
+  background-color: white !important;
+}
+#nav-container.is-fixed-top .navbar-brand img {
+  filter: brightness(100%);
+}
+#nav-container.is-fixed-top * {
+  color: rgb(100, 100, 100) !important;
+}
+#nav-container.is-fixed-top .underline:after {
+  bottom: 20px;
+  background: #575757;
 }
 
 .nav-container {
   width: 100% !important;
   z-index: 20 !important;
-  background-color: white !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease-in-out;
+}
+.nav-container * {
+  color: white !important;
 }
 .nav-container .underline:after {
   bottom: 20px;
-  background: #0f0f0f;
+  background: #ffffff;
 }
 .nav-container .navbar-menu .navbar-item {
-  height: 80px;
+  height: 70px;
 }
 .nav-container .navbar-menu .navbar-dropdown .navbar-item {
   height: 40px;
+}
+.nav-container .navbar-brand img {
+  filter: brightness(10000%);
 }
 .nav-container .navbar-brand .only-mobile {
   align-items: center;
 }
 .nav-container .navbar-start .navbar-item.dark-gray {
-  letter-spacing: 1px;
   color: #5052A2 !important;
-  height: 80px !important;
+  height: 70px !important;
 }
 .nav-container.is-fixed-top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 70px;
 }
 
 .only-mobile {
@@ -351,7 +394,7 @@ nav.navbar {
 }
 
 .main-content {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -364,6 +407,12 @@ footer .footer-links {
 }
 footer .footer-links a p {
   position: relative;
+}
+footer .footer-links a span.icon {
+  margin-top: 10px;
+}
+footer .footer-links a span.ml-3 {
+  margin-top: -10px;
 }
 
 .underline:after {
@@ -386,7 +435,7 @@ footer .footer-links a p {
 
 @media screen and (max-width: 1024px) {
   #nav {
-    height: 80px !important;
+    height: 70px !important;
   }
 
   .is-size-1 {
@@ -437,8 +486,12 @@ footer .footer-links a p {
   }
 }
 @media screen and (max-width: 768px) {
-  body {
-    letter-spacing: 0px !important;
+  .navbar-item {
+    padding-left: 40px !important;
+  }
+
+  .is-size-0 {
+    font-size: 2.5rem !important;
   }
 
   .is-size-1 {
@@ -449,8 +502,12 @@ footer .footer-links a p {
     font-size: 1.5rem !important;
   }
 
+  .is-size-4 {
+    font-size: 1.25rem !important;
+  }
+
   .is-size-5 {
-    font-size: 1rem !important;
+    font-size: 1.25rem !important;
   }
 
   #logofolio {
@@ -474,7 +531,7 @@ footer .footer-links a p {
     padding-bottom: 0 !important;
   }
   #nav-logo.minimize {
-    width: 170px;
+    width: 120px;
   }
 
   .only-mobile {
