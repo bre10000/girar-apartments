@@ -28,15 +28,18 @@
 
   <link type="text/css" href="./vendor/bulma/dist/css/bulma.min.css" rel="stylesheet">
   <link type="text/css" href="./vendor/bulma/dist/css/bulma-pageloader.min.css" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
 
   <link rel="stylesheet" href="./css/custom-general.css">
   <link rel="stylesheet" href="./css/custom-home.css">
+
+  <link rel="stylesheet" href="vendor/owl-carousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendor/owl-carousel/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendor/locomotive-scroll/locomotive-scroll.min.css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -46,289 +49,734 @@
 
 </head>
 
-<body>
+<body id="body" data-scroll-container>
 
   <div id="pageloader" class="pageloader is-active has-background-success"><span class="title display">GIRAR
       APARTMENTS</span></div>
 
 
 
-  <div class="has-background-light is-hidden-mobile px-5" style="margin-top: -10px;">
-    <div class="header is-flex is-align-items-center is-justify-content-space-between">
-      <div class="p-3 mt-1"> <img src="./images/logo/girar-logo.svg" id="nav-logo2" class="minimize"></div>
-      <a href="tel:+251901844448" class="is-size-7 light-gray">+(251) 901 84 44 48 </a>
-      <a href="tel:+251901577775" class="is-size-7 light-gray">+(251) 901 57 77 75 </a>
-      <a href="mailto:sales@girarapartments.com" class="is-size-7 light-gray">sales@girarapartments.com </a>
-      <a href="https://goo.gl/maps/fjGoBCvdaCM1YJQv5" class="is-size-7 light-gray">Israel Embassy, Yeka, Addis
-        Abeba
-        Ethiopia </a>
+  <div data-scroll-section>
+
+    <div id="contact-info" data-scroll class="is-hidden-mobile px-6" style="height: 45px !important">
+      <div class="header is-flex is-align-items-center is-justify-content-space-between">
+        <div class="p-1 mt-1"> <img src="./images/logo/girar-logo.svg" id="nav-logo2" class="minimize"></div>
+        <a href="tel:+251901844448" class="is-size-7 light-gray">+(251) 901 84 44 48 </a>
+        <a href="tel:+251901577775" class="is-size-7 light-gray">+(251) 901 57 77 75 </a>
+        <a href="mailto:sales@girarapartments.com" class="is-size-7 light-gray">sales@girarapartments.com </a>
+        <a href="https://goo.gl/maps/fjGoBCvdaCM1YJQv5" class="is-size-7 light-gray">Israel Embassy, Yeka, Addis
+          Abeba
+          Ethiopia </a>
+      </div>
     </div>
-  </div>
 
-  <!-- Navbar -->
-  <div id="nav-container" class="nav-container">
+    <!-- Navbar -->
+    <div data-scroll id="nav-container" class="nav-container">
 
-    <nav id="nav" class="navbar header px-4" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a id="logo-container" href="#">
-          <img src="./images/logo/girar-logo-text.svg" id="nav-logo" class="minimize">
-        </a>
-        <!-- <p class="only-mobile is-size-6 has-text-weight-semibold gray pt-4 px-3 is-italic">contact@verotech.ml</p> -->
-        <!-- <button id="navbarBurger" class="navbar-burger" data-target="navMenuExpo">
+      <nav id="nav" class="navbar header px-4" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a id="logo-container" href="#">
+            <img src="./images/logo/girar-logo-text.svg" id="nav-logo" class="minimize">
+          </a>
+          <!-- <p class="only-mobile is-size-6 has-text-weight-semibold gray pt-4 px-3 is-italic">contact@verotech.ml</p> -->
+          <!-- <button id="navbarBurger" class="navbar-burger" data-target="navMenuExpo">
           <img width="40" src="./images/icons/nav-icon@4x.png" alt="Email Icon">
         </button> -->
 
-        <a role="button" class="navbar-burger" id="navbarBurger" aria-label="menu" aria-expanded="false"
-          data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+          <a role="button" class="navbar-burger" id="navbarBurger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu">
+          <div class="navbar-start is-size-6 is-hidden-mobile">
+
+          </div>
+
+          <div class="navbar-end is-size-7">
+            <a href="http://360.girarapartments.com/" target="_blank" class="navbar-item is-light mr-5 px-3">
+              <span class="underline  has-text-weight-bold">3D Tour</span>
+            </a>
+
+            <a href="https://goo.gl/maps/fjGoBCvdaCM1YJQv5" target="_blank" class="navbar-item is-light mr-5 px-3">
+              <span class="underline  has-text-weight-bold">
+                Location
+              </span>
+            </a>
+
+
+            <a href="#" onclick="window.locomotive.scrollTo(document.getElementById('contact-info'))"
+              class="navbar-item is-light px-3">
+              <span class="underline  has-text-weight-bold">Contact Sales</span>
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </nav>
+    </div>
+
+    <div id="spacer" class="is-hidden" style="height: 80px; width: 100%;">
+      <br><br>
+    </div>
+
+    <div data-scroll data-scroll-speed="-1" class="main-banner is-relative"
+      style="margin-top: -70px; height: 100vh; overflow: hidden;">
+
+
+
+      <div id="main-slider" class="owl-carousel is-hidden-mobile" style="width: 100%; height: 100%;">
+
+
+        <div>
+          <img src="./images/home/main-banner.jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/home/gallery/desktop/side-view.jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/home/gallery/desktop/modern-kitchen-(2).jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/home/gallery/desktop/traditional-kitchen-2.jpg" alt="">
+        </div>
+
       </div>
 
-      <div id="navbar-menu" class="navbar-menu">
-        <div class="navbar-start is-size-6 is-hidden-mobile">
+      <div id="main-slider2" class="owl-carousel is-hidden-tablet" style="width: 100%; height: 100vh;">
 
-          <!-- <a href="./contact-us.html" class="navbar-item is-light px-3">Newsroom</a> -->
-          <!-- <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                <span class="icon is-small ml-4">
-                  <img src="./images/icons/language.png" width="25" alt="language icon" class="mr-4">
+
+        <div>
+          <img src="./images/home/gallery/mobile/main-banner.jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/home/gallery/mobile/side-view.jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/home/gallery/mobile/modern-kitchen-(2).jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/home/gallery/mobile/traditional-kitchen-2.jpg" alt="">
+        </div>
+
+
+      </div>
+
+
+      <div class="slider-title">
+        <div class="header p-4">
+          <div class="columns home-content is-align-items-end" style="height: 100vh; width: 100%;">
+
+
+
+            <div class="column p-4" data-scroll data-scroll-speed="3">
+              <h3 class="reveal ">
+                <span class="is-size-1 display has-text-left has-text-white">
+                  Live Modern
                 </span>
-                
-                <span class="is-hidden-desktop language-text">Language</span>
+              </h3>
+              <h3 data-scroll class="reveal">
+                <span class="is-size-5 has-text-left has-text-white">
+                  At the heart of the city
+                </span>
+              </h3>
+              <!-- <p data-scroll class="fade-in has-text-white is-size-7 has-text-weight-light">Enter your email for our
+                latest updates.
+              </p> -->
+              <!-- <div data-scroll class="field fade-in" style="width: 350px;">
+                <p class="control has-icons-right">
+                  <input class="input is-light has-background-light has-text-weight-light"
+                    style="border-radius: 10px; margin-left: -5px; padding-left: 10px;" type="email"
+                    placeholder="Your Email Address">
+                  <span class="icon is-small is-right is-clickable mx-2">
+                    <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="black" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                  </span>
+                </p>
+              </div> -->
+              <br class="is-hidden-mobile"><br class="is-hidden-mobile">
+              <br class="is-hidden-mobile"><br class="is-hidden-mobile"><br><br>
+            </div>
+
+            <!-- <div class="column is-4 has-text-centered is-hidden-mobile" data-scroll data-scroll-speed="2">
+              <a data-scroll href="#description-home">
+                <img width="20" src="./images/home/icons/scroll.svg" alt="">
               </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  English
-                </a>
-                <a class="navbar-item">
-                  Amharic
-                </a>
-              </div>
+              <p class="has-text-white">Scroll</p>
+
+              <br><br><br><br>
             </div> -->
+
+
+            <div data-scroll data-scroll-speed="2" class="column has-text-right">
+              <a target="_blank" class="remote-button" href="http://360.girarapartments.com/">
+                <img width="100" src="./images/home/icons/3d tour.svg" alt="">
+              </a>
+              <br>
+              <a target="_blank" class="remote-button" href="the-view.html">
+                <img width="100" src="./images/home/icons/the view.svg" alt="">
+              </a>
+              <br>
+              <a target="_blank" class="remote-button" href="https://goo.gl/maps/fjGoBCvdaCM1YJQv5">
+                <img width="100" src="./images/home/icons/location.svg" alt="">
+              </a>
+              <br><br><br><br><br><br>
+            </div>
+
+          </div>
         </div>
-
-        <div class="navbar-end is-size-7">
-          <!-- <a href="#" class="navbar-item is-light mr-5 px-3">
-            <span class="underline">Overview</span>
-          </a> -->
-
-          <a href="http://360.girarapartments.com/" target="_blank" class="navbar-item is-light mr-5 px-3">
-            <span class="underline  has-text-weight-bold">3D Tour</span>
-          </a>
-
-          <a href="https://goo.gl/maps/fjGoBCvdaCM1YJQv5" target="_blank" class="navbar-item is-light mr-5 px-3">
-            <span class="underline  has-text-weight-bold">
-              Location
-            </span>
-          </a>
-
-
-          <a href="#contact" class="navbar-item is-light mr-5 px-3">
-            <span class="underline  has-text-weight-bold">Contact Sales</span>
-          </a>
-
-
-        </div>
-
       </div>
 
-    </nav>
+    </div>
+
   </div>
 
-  <div id="spacer" class="is-hidden" style="height: 80px; width: 100%;">
+
+  <div data-scroll-section class="description-home" id="description-home">
+    <br><br>
+
+
+    <div class="header">
+      <br>
+      <div class="columns">
+        <div class="column" data-scroll data-scroll-speed="1">
+          <div class="trigger1"></div>
+          <div class="container has-text-centered apartments" style="max-width: 800px; margin: 0 auto;">
+            <br><br><br>
+
+            <img src="./images/home/icons/key.svg" width="35" alt="">
+            <br>
+            <h1 class="is-size-4 py-4  has-text-white is-uppercase has-text-weight-bold" style="line-height: 1;"><span
+                class="has-text-weight-normal is-size-6 light-gray">We have </span><br> 10 Luxurious Apartments.</h1>
+          </div>
+        </div>
+
+        <div class="column" data-scroll data-scroll-speed="1">
+          <div class="trigger2"></div>
+
+          <div class="container has-text-centered area" style="max-width: 800px; margin: 0 auto;">
+            <br><br><br>
+            <img src="./images/home/icons/ruler.svg" width="40" alt="">
+            <br>
+            <h1 class="is-size-4 py-4  has-text-white is-uppercase has-text-weight-bold" style="line-height: 1;"><span
+                class="has-text-weight-normal is-size-6 light-gray">Each with 3 Bedrooms and <br
+                  class="is-hidden-tablet">an area of </span><br>241 <span
+                class="has-text-weight-normal is-size-5  has-text-white">&</span>
+              252 Sqm. </h1>
+          </div>
+        </div>
+
+        <div class="column" data-scroll data-scroll-speed="1">
+          <div class="trigger3"></div>
+
+          <div class="container has-text-centered parking" style="max-width: 800px; margin: 0 auto;">
+            <br><br><br>
+            <img src="./images/home/icons/parking.svg" width="60" alt="">
+            <br>
+            <h1 class="is-size-4 py-4  has-text-white is-uppercase has-text-weight-bold" style="line-height: 1;"><span
+                class="has-text-weight-normal is-size-6 light-gray">Complete with a</span><br> spacious parking
+              space.</h1>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br>
+    </div>
     <br><br>
   </div>
 
 
-  <div class="main-banner hero" id="hero">
-    <div class="header is-flex is-flex-direction-column is-fullwidth py-6 px-6 is-justify-content-end"
-      style="width: 100%; height: 100%;">
-      <h3 class="reveal">
-        <span class="is-size-0 display is-uppercase has-text-left has-text-white">
-          Live Modern
-        </span>
-      </h3>
-      <h3 class="reveal">
-        <span class="is-size-4 is-uppercase has-text-left has-text-white">
-          At the heart of the city
-        </span>
-      </h3>
-      <br><br><br>
+
+  <div data-scroll-section class="view-section">
+    <div class="view">
+
+      <img class="panorama-view is-hidden-mobile is-fullwidth" src="./images/home/panorama-view-girar.jpg" alt="">
+      <img id="living-room" class="living-room is-hidden-mobile is-fullwidth" src="./images/home/living-room.png"
+        alt="">
+
+      <img class="panorama-view is-hidden-tablet is-fullwidth" src="./images/home/panorama-view-mobile.jpg" alt="">
+      <img class="living-room is-hidden-tablet is-fullwidth" src="./images/home/living-room-mobile.png" alt="">
     </div>
 
 
+    <main class="main-content is-flex is-align-items-center">
 
 
-  </div>
+        <div  class="header columns is-align-items-center" style="width: 100%;">
 
-  <div class="has-background-success description-home">
-    <br><br><br> <br><br><br>
-    <div class="trigger1"></div>
-    <div class="container has-text-centered apartments" style="height: 500px; max-width: 800px; margin: 0 auto;">
-      <br><br><br>
+            <div class="column is-align-items-center" data-scroll data-scroll-speed="2">
+              <!-- <h1 class="is-size-1 has-text-weight-bold is-red" style="line-height: 1;">VERO TECH</h1> -->
+              <div style="max-width: 400px;" class="p-5">
+                <br><br><br>
+                <h1 class="">
+                  <span class="is-size-1 display has-text-white">
+                    A
+                  </span>
+                  <br>
+                </h1>
+                <h1 class="">
+                  <span class="is-size-1 display has-text-white">
+                    Breathtaking
+                  </span>
+                  <br>
+                </h1>
+                <h1 class=" ">
+                  <span class="is-size-1 display has-text-white">
+                    View
+                  </span>
+                  <br>
+                </h1>
 
-      <img src="./images/home/icons/key.svg" width="75" alt="">
-      <h1 class="is-size-1 py-4 has-text-white is-uppercase has-text-weight-bold"><span
-          class="has-text-weight-normal is-size-4 has-text-white">We have </span><br> 10 Luxurious Apartments.</h1>
-    </div>
-
-    <br><br><br>
-    <div class="trigger2"></div>
-
-    <div class="container has-text-centered area" style="height: 500px; max-width: 800px; margin: 0 auto;">
-      <br><br><br>
-      <img src="./images/home/icons/ruler.svg" width="75" alt="">
-      <h1 class="is-size-1 py-4 has-text-white is-uppercase has-text-weight-bold" style="line-height: 1;"><span
-          class="has-text-weight-normal is-size-4 has-text-white">Each with 3 Bedrooms and <br
-            class="is-hidden-tablet">an area of </span><br>241 <span
-            class="has-text-weight-normal is-size-3 has-text-white">&</span>
-             252 Sqm. </h1>
-    </div>
-
-    <br><br><br>
-    <div class="trigger3"></div>
-
-    <div class="container has-text-centered parking" style="height: 500px; max-width: 800px; margin: 0 auto;">
-      <br><br><br>
-      <img src="./images/home/icons/parking.svg" width="75" alt="">
-      <h1 class="is-size-1 py-4 has-text-white is-uppercase has-text-weight-bold"><span
-          class="has-text-weight-normal is-size-4 has-text-white">Complete with a</span><br> spacious parking
-        space.</h1>
-    </div>
-
-
-    <br><br><br> <br><br><br>
-  </div>
-
-  <div class="view trigger4">
-
-    <img class="panorama-view is-hidden-mobile is-fullwidth" src="./images/home/panorama-view-girar.jpg" alt="">
-    <img class="living-room is-hidden-mobile is-fullwidth" src="./images/home/living-room.png" alt="">
-
-    <img class="panorama-view is-hidden-tablet is-fullwidth" src="./images/home/panorama-view-mobile.jpg" alt="">
-    <img class="living-room is-hidden-tablet is-fullwidth" src="./images/home/living-room-mobile.png" alt="">
-  </div>
+                <br>
+                <a target="_blank" class="remote-button" href="the-view.html">
+                  <img src="./images/home/icons/the view.svg" width="100" alt="">
+                </a>
+              </div>
+            </div>
+            <div data-scroll data-scroll-speed="3" class="column has-text-right">
+              <br><br><br>
+              <br class="is-hidden-mobile"><br class="is-hidden-mobile"><br class="is-hidden-mobile"><br
+                class="is-hidden-mobile"><br class="is-hidden-mobile"><br class="is-hidden-mobile"><br
+                class="is-hidden-mobile"><br><br><br><br>
+              <div style="max-width: 350px; margin: 0 auto;" class="view-text-desc">
+                <p class="is-size-7 has-text-weight-light has-text-white" style="line-height: 1.4;">
+                  Our open living spaces with relaxing views and a close distance to Addis Ababa’s hot spots makes us an
+                  easy choice. We are the ideal spot for your future to be built upon.</p>
 
 
-  <!-- Navbar End -->
+                <br>
+                <!-- <a target="_blank" href="./downloads/Girar Booklet Small.pdf"
+                  class="button is-dark has-text-weight-bold is-hoverable p-5">DOWNLOAD BROCHURE</a> -->
 
+              </div>
 
-  <!-- <div class="has-background-danger px-6 pt-4 pb-5">
-    <div class="columns main-content px-6 mt-0 has-text-centered">
-      <div class="column p-6 has-border-right-gray">
-        <p class="has-text-white">Hotels</p>
-      </div>
-      <div class="column p-6 has-border-right-gray has-text-centered">
-        <p class="has-text-white">Warehouses</p>
-      </div>
-      <div class="column p-6 has-border-right-gray has-text-centered">
-        <p class="has-text-white">Mixed Use</p>
-      </div>
-      <div class="column p-6 has-text-centered">
-        <p class="has-text-white">Public Housing</p>
-      </div>
-    </div>
-  </div> -->
-
-
-  <!-- Main Content -->
-  <main class="main-content mt-6 letter-spacing-1">
-
-
-    <div class="container-fluid px-5">
-      <div class="columns main-section is-align-items-center">
-        <div class="column is-align-items-center is-6">
-          <!-- <h1 class="is-size-1 has-text-weight-bold is-red" style="line-height: 1;">VERO TECH</h1> -->
-          <div class="trigger5" style="max-width: 500px;">
-            <h1 class="reveal-2">
-              <span class="is-size-0 is-uppercase">
-                A
-              </span>
-              <br>
-            </h1>
-            <h1 class="reveal-2 ">
-              <span class="is-size-0 is-uppercase">
-                Breathtaking
-              </span>
-              <br>
-            </h1>
-            <h1 class="reveal-2 ">
-              <span class="is-size-0 is-uppercase">
-                View
-              </span>
-              <br>
-            </h1>
-
-
-          </div>
-        </div>
-        <div class="column is-6 has-text-left">
-
-          <br class="is-hidden-mobile"><br class="is-hidden-mobile"><br class="is-hidden-mobile"><br
-            class="is-hidden-mobile"><br class="is-hidden-mobile"><br class="is-hidden-mobile"><br
-            class="is-hidden-mobile"><br><br><br><br>
-          <div style="max-width: 350px; margin: 0 auto;" class="view-text-desc">
-            <p class="is-size-6 gray has-text-weight-light" style="line-height: 1;">
-              Our open living spaces with relaxing views and a close distance to Addis Ababa’s hot spots makes us an
-              easy choice. We are the ideal spot for your future to be built upon.</p>
-
-
-            <br>
-            <!-- <a target="_blank" href="./downloads/Girar Booklet Small.pdf"
-              class="button is-dark has-text-weight-bold is-hoverable p-5">DOWNLOAD BROCHURE</a> -->
-
-          </div>
+            </div>
 
         </div>
+
+
+    </main>
+  </div>
+
+
+
+  <div data-scroll-section class="header">
+    <div class="columns is-align-items-center" style="height: 100vh;">
+      <div class="column has-text-centered">
+        <br><br><br>
+        <a href=""><img data-scroll data-scroll-speed="2" width="450" src="./images/home/Video Presentation.jpg"
+            alt=""></a>
+
+        <!-- <h1 data-scroll data-scroll-speed="4" class="is-size-2 display has-text-center has-text-left-mobile p-5">Video
+          Tour</h1> -->
+
+
+      </div>
+      <div class="column p-5">
+        <br>
+        <h5 data-scroll data-scroll-speed="4" class="is-size-3 display has-text-weight-bold  p-4">A Place Where you
+          can <br> find yourself</h5>
+
+        <ul data-scroll data-scroll-speed="3" class="px-5 is-size-7">
+          <li class="gray">
+            <span class="icon mr-1">
+              <img src="./images/home/icons/check_tiny.svg" width="12" alt="">
+            </span>
+            Modern and open design
+          </li>
+          <li class="gray">
+            <span class="icon mr-1">
+              <img src="./images/home/icons/check_tiny.svg" width="12" alt="">
+            </span>
+            Quiet and peaceful location
+          </li>
+          <li class="gray">
+            <span class="icon mr-1">
+              <img src="./images/home/icons/check_tiny.svg" width="12" alt="">
+            </span>
+            Recreation Center for various events
+          </li>
+          <li class="gray">
+            <span class="icon mr-1">
+              <img src="./images/home/icons/check_tiny.svg" width="12" alt="">
+            </span>
+            A spacious parking space
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <div data-scroll-section class="header">
+
+    <div class="columns stages is-align-items-center px-6">
+
+      <div class="column has-text-centered">
+        <div class="is-flex has-text-left">
+          <img src="./images/home/icons/check-big.svg" class="mr-4" width="50" alt="">
+          <div>
+            <p class="gray is-size-7 has-text-weight-bold" style="line-height: 1;">1st stage</p>
+            <h1 class="is-size-5 has-text-weight-bold" style="line-height: 1;">Planning</h1>
+            <p class="gray is-size-7" style="line-height: 1;">Completed</p>
+          </div>
+        </div>
       </div>
 
+      <div class="column has-text-centered">
+        <div class="is-flex has-text-left">
+          <img src="./images/home/icons/check-big.svg" class="mr-4" width="50" alt="">
+          <div>
+            <p class="gray is-size-7 has-text-weight-bold" style="line-height: 1;">2nd stage</p>
+            <h1 class="is-size-5 has-text-weight-bold" style="line-height: 1;">Building</h1>
+            <p class="gray is-size-7" style="line-height: 1;">Completed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="is-flex has-text-left">
+          <img src="./images/home/icons/in-progress-big.svg" class="mr-4" width="50" alt="">
+          <div>
+            <p class="gray is-size-7 has-text-weight-bold" style="line-height: 1;">3rd stage</p>
+            <h1 class="is-size-5 has-text-weight-bold" style="line-height: 1;">Finishing</h1>
+            <p class="gray is-size-7" style="line-height: 1;">In Progress</p>
+          </div>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <div class="is-flex has-text-left">
+          <img src="./images/home/icons/done-big.svg" class="mr-4" width="50" alt="">
+          <div>
+            <p class="gray is-size-7 has-text-weight-bold" style="line-height: 1;">4th stage</p>
+            <h1 class="is-size-5 has-text-weight-bold" style="line-height: 1;">Project Done</h1>
+            <p class="gray is-size-7" style="line-height: 1;">Not Completed</p>
+          </div>
+        </div>
+      </div>
 
     </div>
-  </main>
+
+  </div>
+
+
+
+  <br><br><br>
+  <br><br><br>
+
+
+  <div data-scroll-section class="header">
+    <div class="columns is-align-items-center">
+
+      <div class="column">
+        <div style="max-width: 300px; margin: 0 auto;">
+          <h5 data-scroll data-scroll-speed="2" class="is-size-6 has-text-weight-bold is-uppercase">Modern and Open
+            Design</h5>
+          <p data-scroll data-scroll-speed="3" class="gray is-size-7">
+            Our apartments are architected to maximize your comfort and let you ease in to a good mood. The living space
+            extends all the way to the kitchen creating a one of kind open space. Our kitchens are amazing to cook in
+            and the smell of your strong Ethiopian spices are contained within the traditional kitchen.
+          </p>
+          <br><br>
+          <h5 data-scroll data-scroll-speed="2" class="is-size-6 has-text-weight-bold is-uppercase">High Quality Build
+          </h5>
+          <p data-scroll data-scroll-speed="3" class="gray is-size-7">
+            The master bedroom comes with its own bathroom and is truly a great place to rest. It is accompanied by two
+            bedrooms, one for family or a guest and the other one for your children which can also be a great office
+            space.
+          </p>
+        </div>
+      </div>
+
+      <div class="column is-6 has-text-centered is-hidden-mobile p-5">
+
+        <h1 data-scroll data-scroll-speed="3" class="is-size-3 display has-text-centered">Architecture and Design</h1>
+        <div class="p-6">
+          <div id="design-slider" class="owl-carousel owl-theme">
+
+
+            <div>
+              <img src="./images/home/architecture/living-room.jpg" alt="Living Room">
+            </div>
+            <div>
+              <img src="./images/home/architecture/dining-area.jpg" alt="Dining Area">
+            </div>
+            <div>
+              <img src="./images/home/architecture/master-bedroom.jpg" alt="Master Bedroom">
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+  </div>
   <br><br><br><br>
 
-  <div class="map trigger6" id="location">
+  <div data-scroll-section class="is-hidden-mobile">
+    <br>
+    <h2 data-scroll data-scroll-speed="2" class="display is-size-1 px-6">Gallery</h2>
+    <br>
+    <div id="image_container" onclick="openGallery()" style="width: 100%;">
+
+      <div id="gallery" class="owl-carousel" style="width: 100%;">
+
+        <div>
+          <img data-bp="./images/home/main-banner.jpg" src="./images/home/main-banner.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Living Room</p>
+        </div>
+        <!-- <div>
+          <img data-bp="./images/home/gallery/desktop/side-view.jpg" src="./images/home/gallery/desktop/side-view.jpg"
+            alt="">
+          <p class="has-text-weight-bold  p-4">Side View</p>
+        </div> -->
+        <div>
+          <img data-bp="./images/home/gallery/desktop/modern-kitchen-(2).jpg"
+            src="./images/home/gallery/desktop/modern-kitchen-(2).jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Modern Kitchen</p>
+        </div>
+        <div>
+          <img data-bp="./images/home/gallery/desktop/traditional-kitchen-2.jpg"
+            src="./images/home/gallery/desktop/traditional-kitchen-2.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Traditional Kitchen</p>
+        </div>
+
+        <div>
+          <img data-bp="./images/home/gallery/desktop/dining-area-2.jpg"
+            src="./images/home/gallery/desktop/dining-area-2.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Dining Area</p>
+        </div>
+
+        <div>
+          <img data-bp="./images/home/gallery/desktop/dining-area.jpg"
+            src="./images/home/gallery/desktop/dining-area.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Dining Area 2</p>
+        </div>
+
+
+        <div>
+          <img data-bp="./images/home/gallery/desktop/parking.jpg" src="./images/home/gallery/desktop/parking.jpg"
+            alt="">
+          <p class="has-text-weight-bold  p-4">Parking</p>
+        </div>
+
+
+        <div>
+          <img data-bp="./images/home/gallery/desktop/side-view-2.jpg"
+            src="./images/home/gallery/desktop/side-view-2.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Side View</p>
+        </div>
+
+        <div>
+          <img data-bp="./images/home/gallery/desktop/side-view-3.jpg"
+            src="./images/home/gallery/desktop/side-view-3.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Side View 2</p>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <br><br><br><br>
+  </div>
+
+  <div data-scroll-section class="is-hidden-tablet">
+    <h2 class="display is-size-1 px-6">Gallery</h2>
+    <br>
+    <div style="width: 100%;">
+
+      <div id="gallery2" class="owl-carousel" style="width: 100%;">
+
+        <!-- <div>
+          <img src="./images/home/gallery/mobile/side-view.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Side View</p>
+        </div> -->
+        <div>
+          <img src="./images/home/gallery/mobile/modern-kitchen-(2).jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Modern Kitchen</p>
+        </div>
+        <div>
+          <img src="./images/home/gallery/mobile/traditional-kitchen-2.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Traditional Kitchen</p>
+        </div>
+
+        <div>
+          <img data-bp="./images/home/gallery/mobile/dining-area-2.jpg"
+            src="./images/home/gallery/mobile/dining-area-2.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Dining Area</p>
+        </div>
+
+        <div>
+          <img data-bp="./images/home/gallery/mobile/dining-area.jpg" src="./images/home/gallery/mobile/dining-area.jpg"
+            alt="">
+          <p class="has-text-weight-bold  p-4">Dining Area 2</p>
+        </div>
+
+
+        <div>
+          <img data-bp="./images/home/gallery/mobile/parking.jpg" src="./images/home/gallery/mobile/parking.jpg" alt="">
+          <p class="has-text-weight-bold  p-4">Parking</p>
+        </div>
+
+
+        <div>
+          <img data-bp="./images/home/gallery/mobile/side-view-2.jpg" src="./images/home/gallery/mobile/side-view-2.jpg"
+            alt="">
+          <p class="has-text-weight-bold  p-4">Side View 2</p>
+        </div>
+
+        <div>
+          <img data-bp="./images/home/gallery/mobile/side-view-3.jpg" src="./images/home/gallery/mobile/side-view-3.jpg"
+            alt="">
+          <p class="has-text-weight-bold  p-4">Side View 3</p>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <br><br><br><br>
+  </div>
+
+  <div data-scroll-section>
+
+    <div class="columns header p-5 has-text-centered-mobile" style="width: 100%;">
+
+      <div class="column">
+        <br><br><br><br>
+        <h1 data-scroll data-scroll-speed="3" class="is-size-1 display">
+          Choose <br>Your <br>Apartment
+        </h1>
+      </div>
+
+      <div class="column">
+        <h4 class="has-text-weight-bold is-size-4 is-uppercase">East</h4>
+        <br>
+        <p class="light-gray">
+          Net Area
+        </p>
+        <h6 class="has-text-weight-bold">185 m<sup>2</sup></h6>
+        <p class="light-gray">
+          Gross Area
+        </p>
+        <h6 class="has-text-weight-bold">241 m<sup>2</sup></h6>
+        <p class="light-gray">
+          Storage
+        </p>
+        <h6 class="has-text-weight-bold">18 m<sup>2</sup></h6>
+        <p class="light-gray">
+          Available
+        </p>
+        <h6 class="has-text-weight-bold">5</h6>
+
+        <br>
+        <a href="./east.html" class="button is-black has-background-success has-text-weight-bold"
+          style="border-radius: 10px;">Apartment Details</a>
+      </div>
+
+      <div class="column">
+        <h4 class="has-text-weight-bold is-size-4 is-uppercase">West</h4>
+        <br>
+        <p class="light-gray">
+          Net Area
+        </p>
+        <h6 class="has-text-weight-bold">182 m<sup>2</sup></h6>
+        <p class="light-gray">
+          Gross Area
+        </p>
+        <h6 class="has-text-weight-bold">252 m<sup>2</sup></h6>
+        <p class="light-gray">
+          Storage
+        </p>
+        <h6 class="has-text-weight-bold">30 m<sup>2</sup></h6>
+        <p class="light-gray">
+          Available
+        </p>
+        <h6 class="has-text-weight-bold">5</h6>
+
+        <br>
+        <a href="./west.html" class="button is-black has-background-success has-text-weight-bold"
+          style="border-radius: 10px;">Apartment Details</a>
+      </div>
 
 
 
 
-    <img id="map-image" class="is-fullwidth map is-hidden-mobile" src="./images/home/map.jpg" alt="">
-    <img id="map-image" class="is-fullwidth map is-hidden-tablet" src="./images/home/map-mobile.png" alt="">
+
+    </div>
+
+
+    <br><br><br><br><br>
+  </div>
+
+
+
+  <div data-scroll-section class="map trigger6" id="location">
 
 
 
 
-    <div class="city-center">
+    <img data-scroll id="map-image" class="is-fullwidth map is-hidden-mobile" src="./images/home/map.jpg" alt="">
+    <img data-scroll id="map-image" class="is-fullwidth map is-hidden-tablet" src="./images/home/map-mobile.jpg" alt="">
+
+
+
+
+    <div data-scroll data-scroll-speed="2" class="city-center">
+      <br>
       <h1 class="reveal-3">
-        <span class="is-size-0 display is-uppercase">
+        <span class="is-size-1 display">
           City
         </span>
         <br>
       </h1>
       <h1 class="reveal-3">
-        <span class="is-size-0 display is-uppercase">
+        <span class="is-size-1 display">
           Center
         </span>
         <br>
       </h1>
-
       <br>
 
-      <p class="is-size-7 gray reveal-4" style="line-height: 1.8;">
-        Located near to the center of the city at the base of the Yeka Mountains lies our luxurious apartment building.
-      </p>
+      <div style="max-width: 300px;">
+        <p class="is-size-7 gray reveal-4" style="line-height: 1;">
+          Located near to the center of the city at the base of the Yeka Mountains lies our luxurious apartment
+          building.
+        </p>
+      </div>
 
-      <a href="https://goo.gl/maps/fjGoBCvdaCM1YJQv5"
-        class="pt-2 reveal-4 has-text-weight-bold has-text-success is-flex is-align-items-center"> <img
-          src="./images/home/map__icon.png" width="15" alt=""> <span
+
+
+      <br>
+      <a href="https://goo.gl/maps/fjGoBCvdaCM1YJQv5" class="button is-white p-5 has-text-weight-bold has-text-success">
+        <img src="./images/home/map__icon.png" width="15" alt=""> <span
           class="has-text-weight-bold has-text-success ml-3">Go to Google Maps</span></a>
 
     </div>
 
-    <svg id="mapPath" class="is-hidden-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1203">
+    <svg data-scroll id="mapPath" class="is-hidden-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1203">
 
       <path fill="transparent" stroke="#db8d37" stroke-width="6"
         d="M982,443a141.06,141.06,0,0,0,30-25c5-5.52,10.93-13.18,22-19,8.71-4.58,11-5.56,13-5,6.09,1.69,7,10.55,13,25,.24.58,4.16,8.06,12,23,16.31,31.1,21.06,38,34,63,3.45,6.67,8.74,17,15,30-4.65,3-9.65,6-15,9a259.53,259.53,0,0,1-27,13c11,14,20.57,24.91,27,32,19.76,21.79,26.27,25.67,41,44,14.61,18.18,9.91,16.48,23,32,13.36,15.83,24.14,24.56,35,44,2.81,5,4.8,9.29,6,12-9-.43-23.37-1.11-41-2-100-5-84-5.38-151-9-35.54-1.92-38.4-1.74-47-4-14.81-3.9-29.37-10.51-34-5-1.63,1.94-1.75,5.62-2,13-.18,5.4-.27,8.1,1,10,3.54,5.29,14.63,3.61,19,3,16.19-2.26,32.71-.69,49-2,17.59-1.41,17,1.71,55,5,33.14,2.87,37.9.86,72,3,22.09,1.38,32.89,3,66,7,119.93,14.39,123.76,10.28,168,20,11.19,2.46,32.13,7.38,65,14,27,5.44,42.09,8,48,9,20.4,3.41,36.33,6.08,56,8,22.6,2.21,52.09,4.93,89,1,14.9-1.59,5.67-1.56,56-10,37.69-6.32,49.21-7.4,68-15,10.07-4.07,13.16-6.35,28-12,17.91-6.81,36.33-12.22,39-13,18-5.27,23.21-5.79,32-11a75,75,0,0,0,18-15" />
@@ -342,33 +790,9 @@
     </svg>
 
 
-    <svg id="mapPath" class="is-hidden-tablet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 556">
-      <defs>
-        <style>
-          .cls-61,
-          .cls-62 {
-            fill: none;
-          }
-
-          .cls-62 {
-            stroke: #c69c6d;
-            stroke-miterlimit: 10;
-            stroke-width: 3px;
-          }
-        </style>
-      </defs>
-      <title>path-mobile-2</title>
-      <g id="Layer_2" data-name="Layer 2">
-        <g id="Layer_1-2" data-name="Layer 1">
-          <rect class="cls-61" width="540" height="556" />
-          <path fill="transparent" stroke="#db8d37" stroke-width="6" class="cls-62"
-            d="M369,166c.67,1.33,1.33,2.67,2,4l12-6a65.74,65.74,0,0,1,8,10,71.61,71.61,0,0,1,9,21c2.49,8.72,6.18,20.62,12,37a184.26,184.26,0,0,1-27,9,172.57,172.57,0,0,1-59,5c-22-2.09-24.24-7-47-8-11.7-.53-18,.45-34,2-74.41,7.22-83.56.19-103,12a179.94,179.94,0,0,1-29,15c-15.71,6.35-22.11,6.22-25,6-5.59-.42-4.93-1.69-26-11-13.48-5.95-21-8.65-26-15a57.09,57.09,0,0,1-6-9c-2.26-4.61-2-6.26-4-8-3.24-2.76-9.68-3.45-13,0-2.88,3-2.3,8-1,11,2.23,5.22,6.48,4.43,10,10,1.66,2.63,2.13,6.12,3,13s.46,9.14,1,15a88.33,88.33,0,0,0,3,16" />
-        </g>
-      </g>
-    </svg>
 
 
-    <div>
+    <div data-scroll>
 
       <svg id="labels" class="is-hidden-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1203">
         <defs>
@@ -522,321 +946,324 @@
 
 
 
-      <svg id="labels" class="is-hidden-tablet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 556">
-        <defs>
-          <style>
-            .cls-71 {
-              fill: none;
-            }
-
-            .cls-72 {
-              fill: #58595b;
-            }
-          </style>
-        </defs>
-        <title>label-mobile</title>
-        <g id="Layer_2" data-name="Layer 2">
-          <g id="Layer_1-2" data-name="Layer 1">
-            <rect class="cls-71" width="540" height="556" />
-            <path class="cls-72"
-              d="M29,285.08a5.11,5.11,0,0,0-5.1,5.11,5.05,5.05,0,0,0,2,4l2.93,5.84a.19.19,0,0,0,.18.11.2.2,0,0,0,.18-.11l2.92-5.84a5,5,0,0,0,2-4A5.1,5.1,0,0,0,29,285.08Zm2.82,8.84a.11.11,0,0,0-.06.07L29,299.5,26.28,294s0-.06-.06-.07a4.68,4.68,0,1,1,5.64,0Z" />
-            <path class="cls-72"
-              d="M29,285.49a4.69,4.69,0,0,0-2.82,8.43s0,0,.06.07L29,299.5,31.8,294a.11.11,0,0,1,.06-.07A4.69,4.69,0,0,0,29,285.49ZM29,292a1.83,1.83,0,1,1,1.83-1.82A1.82,1.82,0,0,1,29,292Z" />
-            <path class="cls-72"
-              d="M29,288.36a1.83,1.83,0,1,0,1.83,1.83A1.82,1.82,0,0,0,29,288.36Zm0,3.24a1.41,1.41,0,1,1,1.41-1.41A1.41,1.41,0,0,1,29,291.6Z" />
-            <path class="cls-72"
-              d="M186.74,226.22l-3,.24.12,2a2.45,2.45,0,0,1,.94-.26,2.33,2.33,0,0,1,2.57,2.27,2.43,2.43,0,0,1-2.37,2.66,2.25,2.25,0,0,1-2.29-1.18l.85-.41a1.52,1.52,0,0,0,1.46.83,1.61,1.61,0,0,0,1.46-1.84,1.65,1.65,0,0,0-2-1.54,3.12,3.12,0,0,0-1.48.58l-.22-3.87,3.89-.3Z" />
-            <path class="cls-72"
-              d="M191.39,225l1.31-.1,3,5.63h0l2.09-6,1.28-.1.57,7.43-.88.07-.48-6.24h0l-2.19,6.44-.53,0-3.15-6h0l.48,6.24-.88.06Z" />
-            <path class="cls-72"
-              d="M201.25,224.28a.6.6,0,0,1,.64.55.58.58,0,0,1-.55.65.59.59,0,0,1-.65-.56A.61.61,0,0,1,201.25,224.28Zm-.22,2.55.82-.06.38,4.91-.82.06Z" />
-            <path class="cls-72"
-              d="M203.57,227.81c0-.45-.11-.84-.13-1.16l.77-.06c0,.26.07.53.09.8h0a1.89,1.89,0,0,1,3.59.8l.23,3-.82.07-.23-2.95c-.06-.82-.46-1.31-1.22-1.25-1.06.08-1.46.89-1.38,2l.19,2.39-.82.07Z" />
-            <path class="cls-72"
-              d="M213.89,229.61c0,.45.11.84.13,1.16l-.78.06c0-.26-.06-.53-.08-.81h0a1.79,1.79,0,0,1-1.57,1.07,1.76,1.76,0,0,1-2-1.86l-.23-3,.82-.06.22,3c.07.82.46,1.3,1.23,1.24,1.06-.08,1.46-.88,1.38-2l-.19-2.4.82-.06Z" />
-            <path class="cls-72"
-              d="M217.9,226.23l-1.45.11.19,2.45c.05.63.1,1.14.82,1.08a1.64,1.64,0,0,0,.71-.22l.09.74a2.39,2.39,0,0,1-.94.25c-1.17.09-1.4-.52-1.48-1.54l-.21-2.7-1.07.08-.06-.69,1.08-.08-.11-1.4.82-.06.1,1.39,1.45-.11Z" />
-            <path class="cls-72"
-              d="M223.55,229.14a2.52,2.52,0,0,1-2.1,1.18,2.59,2.59,0,0,1-.37-5.16,2.3,2.3,0,0,1,2.53,2.39l0,.26-4,.31a1.65,1.65,0,0,0,1.73,1.45,1.83,1.83,0,0,0,1.5-.87Zm-.86-1.95a1.37,1.37,0,0,0-1.58-1.28,1.53,1.53,0,0,0-1.5,1.51Z" />
-            <path class="cls-72"
-              d="M225.08,228.62a1.51,1.51,0,0,0,1.31.56c.51,0,1.06-.3,1-.84s-.58-.62-1.11-.69c-1-.14-1.76-.28-1.84-1.3s.81-1.52,1.72-1.59a1.78,1.78,0,0,1,1.74.77l-.65.5a1.16,1.16,0,0,0-1.08-.51c-.45,0-.95.3-.91.76s.63.54,1.29.62c.88.1,1.64.36,1.72,1.34s-.87,1.62-1.85,1.7a2.09,2.09,0,0,1-2-.77Z" />
-            <path class="cls-72"
-              d="M41.31,294.94,43.77,289h1.12v7.26h-.73V290h0l-2.62,6.27h-.39L38.5,290h0v6.27h-.73V289h1.12Z" />
-            <path class="cls-72"
-              d="M47.09,294.08a1.8,1.8,0,0,0,3.31.89l.52.43a2.51,2.51,0,0,1-2.06,1,2.53,2.53,0,0,1-.06-5.05,2.25,2.25,0,0,1,2.29,2.4v.31Zm3.26-.55A1.44,1.44,0,0,0,48.8,292a1.69,1.69,0,0,0-1.69,1.54Z" />
-            <path class="cls-72"
-              d="M52.7,297.26a2.27,2.27,0,0,0,1.83.88,1.69,1.69,0,0,0,1.87-1.89v-.86h0a2.05,2.05,0,0,1-1.8.9,2.46,2.46,0,1,1-.06-4.92,2.24,2.24,0,0,1,1.86.92h0v-.79h.68v4.75a2.29,2.29,0,0,1-2.58,2.5,2.94,2.94,0,0,1-2.3-1Zm1.9-1.58a1.85,1.85,0,0,0,0-3.69,1.85,1.85,0,0,0,0,3.69Z" />
-            <path class="cls-72"
-              d="M59.07,294.08a1.8,1.8,0,0,0,1.76,1.72,1.82,1.82,0,0,0,1.54-.83l.52.43a2.49,2.49,0,0,1-2.06,1,2.53,2.53,0,0,1-.06-5.05,2.25,2.25,0,0,1,2.3,2.4v.31Zm3.26-.55A1.45,1.45,0,0,0,60.77,292a1.69,1.69,0,0,0-1.68,1.54Z" />
-            <path class="cls-72"
-              d="M65,291.5a6.44,6.44,0,0,1,0,.76h0a1.94,1.94,0,0,1,1.61-.89,1.64,1.64,0,0,1,1.8,1.88v3h-.67v-2.65c0-1.07-.3-1.65-1.31-1.65-.14,0-1.45.09-1.45,1.84v2.46H64.3v-3.74c0-.26,0-.71,0-1.05Z" />
-            <path class="cls-72"
-              d="M73.08,293.35v-.12A1.09,1.09,0,0,0,71.85,292a2.12,2.12,0,0,0-1.46.56l-.41-.48a2.75,2.75,0,0,1,2-.7,1.61,1.61,0,0,1,1.75,1.7v2.15a7.82,7.82,0,0,0,.08,1.07h-.65a4.84,4.84,0,0,1-.06-.78h0a1.79,1.79,0,0,1-1.69.91A1.48,1.48,0,0,1,69.76,295c0-1.56,1.84-1.66,3-1.66Zm-.34.55c-.69,0-2.24.06-2.24,1,0,.64.58.88,1.13.88a1.4,1.4,0,0,0,1.45-1.55v-.35Z" />
-            <path class="cls-72"
-              d="M75.7,297.26a2.29,2.29,0,0,0,1.84.88,1.69,1.69,0,0,0,1.86-1.89v-.86h0a2,2,0,0,1-1.79.9,2.43,2.43,0,0,1-2.5-2.44,2.4,2.4,0,0,1,2.44-2.48,2.22,2.22,0,0,1,1.85.92h0v-.79h.68v4.75a2.29,2.29,0,0,1-2.57,2.5,2.94,2.94,0,0,1-2.31-1Zm1.91-1.58a1.85,1.85,0,0,0,0-3.69,1.85,1.85,0,0,0,0,3.69Z" />
-            <path class="cls-72"
-              d="M82.25,291.5a6.44,6.44,0,0,1,0,.76h0a1.94,1.94,0,0,1,1.61-.89,1.64,1.64,0,0,1,1.8,1.88v3H85v-2.65c0-1.07-.3-1.65-1.3-1.65-.15,0-1.46.09-1.46,1.84v2.46H81.6v-3.74c0-.26,0-.71,0-1.05Z" />
-            <path class="cls-72"
-              d="M90.38,293.35v-.12A1.09,1.09,0,0,0,89.15,292a2.12,2.12,0,0,0-1.46.56l-.41-.48a2.74,2.74,0,0,1,2-.7,1.61,1.61,0,0,1,1.75,1.7v2.15a7.82,7.82,0,0,0,.08,1.07h-.65a4.81,4.81,0,0,1-.07-.78h0a1.79,1.79,0,0,1-1.69.91A1.48,1.48,0,0,1,87.06,295c0-1.56,1.84-1.66,3-1.66Zm-.34.55c-.69,0-2.24.06-2.24,1,0,.64.58.88,1.13.88a1.4,1.4,0,0,0,1.45-1.55v-.35Z" />
-            <path class="cls-72"
-              d="M211.87,217.69V218a3.49,3.49,0,0,1-.57,2.36.23.23,0,0,1-.17.08h-1.06a.21.21,0,0,1-.21-.17v0a.21.21,0,0,1,.22-.21h1a3.21,3.21,0,0,0,.41-2v-.28a3.72,3.72,0,0,0-3.68-3.75l-3.31,0a3.75,3.75,0,0,0-3.59,2.61.2.2,0,0,1-.2.15h-1.37a2.14,2.14,0,0,0-2.16,2.12,2.18,2.18,0,0,0,.28,1.06l1.91,0h.15a.21.21,0,0,1,.21.22.21.21,0,0,1-.21.21h-.26l-1.92,0a.23.23,0,0,1-.19-.1,2.58,2.58,0,0,1,2.2-3.94h1.2a4.19,4.19,0,0,1,3.95-2.77l3.31,0A4.14,4.14,0,0,1,211.87,217.69Z" />
-            <path class="cls-72"
-              d="M207.38,220.16a.14.14,0,0,1,0,.07.2.2,0,0,1-.2.14h-.26l-4.26,0h-.21a.22.22,0,0,1-.21-.22.21.21,0,0,1,.22-.21h.09l4.48,0h.16A.23.23,0,0,1,207.38,220.16Z" />
-            <path class="cls-72"
-              d="M202.53,219.9a1.72,1.72,0,0,0-3.21,0,1.51,1.51,0,0,0-.11.43c0,.06,0,.13,0,.2a1.73,1.73,0,1,0,3.46,0c0-.06,0-.13,0-.19A1.6,1.6,0,0,0,202.53,219.9Zm-.32.62a1.3,1.3,0,1,1-1.28-1.31A1.3,1.3,0,0,1,202.21,220.52Z" />
-            <path class="cls-72"
-              d="M210.07,220.39a.21.21,0,0,1-.21-.17h0a1.1,1.1,0,0,1,.06.37,1.3,1.3,0,1,1-2.59,0,1,1,0,0,1,.05-.34h0a.2.2,0,0,1-.2.14h-.26c0,.06,0,.12,0,.19a1.73,1.73,0,1,0,3.46,0,1.15,1.15,0,0,0,0-.19Zm.15-.42a1.73,1.73,0,0,0-1.59-1.12,1.75,1.75,0,0,0-1.62,1.09,1.18,1.18,0,0,0-.11.43c0,.06,0,.12,0,.19a1.73,1.73,0,1,0,3.46,0,1.15,1.15,0,0,0,0-.19A1.6,1.6,0,0,0,210.22,220Zm-.31.62a1.3,1.3,0,1,1-2.59,0,1,1,0,0,1,.05-.34,1.29,1.29,0,0,1,2.48,0A1.1,1.1,0,0,1,209.91,220.59Z" />
-            <path class="cls-72"
-              d="M211.44,217.68V218a3.21,3.21,0,0,1-.41,2h-.81a1.73,1.73,0,0,0-1.59-1.12,1.75,1.75,0,0,0-1.62,1.09l-4.48,0a1.72,1.72,0,0,0-3.21,0l-1.91,0a2.18,2.18,0,0,1-.28-1.06,2.14,2.14,0,0,1,2.16-2.12h1.37a.2.2,0,0,0,.2-.15,3.75,3.75,0,0,1,3.59-2.61l3.31,0A3.72,3.72,0,0,1,211.44,217.68Z" />
-          </g>
-        </g>
-      </svg>
-
-
-
 
     </div>
 
 
-
-
   </div>
 
-  <br><br><br><br><br><br><br><br>
-  <main class="main-content">
 
-    <div class="has-text-centered">
-      <img width="150" src="./images/logo/girar-logo-center.svg" alt="">
-      <br>
+  <div data-scroll-section class="p-6">
+    <br><br><br><br>
+    <div class="header">
+      <h1 class="is-size-3 display">Contact</h1>
+      <div class="columns">
+        <div class="column">
+          <br><br>
+          <h3 class="is-size-5">Address</h3>
+          <p class="light-gray is-size-7">Israel Embassy, Yeka, Addis Abeba, Ethiopia</p>
+          <br>
+          <h3 class="is-size-5">Phone</h3>
+          <a href="tel:+251901844448" class="light-gray is-size-7">+(251) 901 84 44 48</a><br>
+          <a href="tel:+251901577775" class="light-gray is-size-7">+(251) 901 57 77 75</a>
+          <br>
+          <h3 class="is-size-5">Email</h3>
+          <a href="mailto:sales@girarapartments.com" class="light-gray is-size-7">sales@girarapartments.com</a>
+        </div>
 
-      <h1 class="">
-        <span class="is-size-4 is-uppercase has-text-weight-bold has-text-dark">
-          Your Future Home.
-        </span>
-        <br><br>
-      </h1>
+        <div class="column">
+          <br><br>
+          <h3 class="is-size-5">Social</h3>
+          <a href="https://www.facebook.com/girarapartments/" class="light-gray is-size-7"> <span class="icon">
+              <img src="./images/home/icons/facebook.svg" width="15" alt="">
+            </span> FACEBOOK</a><br>
+          <a href="https://www.instagram.com/girarapartments/" class="light-gray is-size-7"><span class="icon">
+              <img src="./images/home/icons/instagram.svg" width="15" alt="">
+            </span> INSTAGRAM</a><br>
+          <a href="https://www.tiktok.com/@girarapartments" class="light-gray is-size-7"><span class="icon">
+              <img src="./images/home/icons/tiktok.svg" width="15" alt="">
+            </span> TIKTOK</a><br>
+          <a href="tel:+251901844448" class="light-gray is-size-7"><span class="icon">
+              <img src="./images/home/icons/whatsapp.svg" width="15" alt="">
+            </span> WHATSAPP</a><br>
+          <a href="https://t.me/girarapartments" class="light-gray is-size-7"><span class="icon">
+              <img src="./images/home/icons/telegram.svg" width="15" alt="">
+            </span> TELEGRAM</a>
+        </div>
 
-      <div class="is-flex is-justify-content-center girar-calltoaction-phone">
-        <h5 class="light-gray is-size-6 mx-2">+ (251) 901 84 44 48</h5>
-        <h5 class="light-gray is-size-6 mx-2">+ (251) 901 57 77 75</h5>
+        <div class="column is-6">
+          <br><br>
+          <h3 class="is-size-5">Contact Form</h3>
+
+          <form>
+
+            <div class="columns mt-2">
+              <div class="column">
+                <div class="field">
+                  <input type="text" class="input is-light has-background-light" placeholder="Name">
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <input type="email" class="input is-light has-background-light" placeholder="Email Address">
+                </div>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column my-0 py-0">
+                <div class="field">
+                  <textarea class="textarea is-light has-background-light" placeholder="Message"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="has-text-right">
+              <button style="border-radius: 10px;"
+                class="button is-black has-background-success has-text-weight-bold">Send</button>
+            </div>
+
+
+          </form>
+        </div>
+
+
       </div>
-      <h5 class="light-gray is-size-6 mx-4">sales@girarapartments.com</h5>
-      <a href="https://t.me/girarapartments" class="has-text-info is-size-6 mx-4 is-flex is-align-items-center is-justify-content-center"><img src="./images/home/telegram.jpg" class="mr-2" width="20" alt=""> Telegram Channel</a>
-      <!-- <a class="button is-warning is-light is-small has-text-weight-bold p-4 mt-4" target="_blank" href="./downloads/Girar Booklet for Download.pdf"> Download Our Brochure</a> -->
     </div>
 
-    <br>
-    <div class="has-text-centered">
-      <a href="./downloads/Girar Booklet for Download.pdf" target="_blank" style="color: rgb(15, 33, 15) !important;">
-        <button class="button  is-success is-light is-size-6 has-text-weight-bold">
-          Download Brochure
-        </button>
-      </a>
-
-    </div>
-  </main>
-
-
-  <br><br>
-
-
-
-
-
-
-  <div class="masonry-grid container py-6">
-    <!--Item -->
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/1.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/2.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/3.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/4.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/5.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/6.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/7.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/8.jpg" alt="">
-    </div>
-    <div class="masonry-grid__item">
-      <img src="./images//gallery/9.jpg" alt="">
-    </div>
-    <!-- Repeat other items -->
+    <br><br><br><br>
   </div>
 
-
-
-
-  <br><br>
-
-
-
-  <div class="has-text-centered">
-    <a href="https://360.girarapartments.com" class="is-clickable">
-      <img src="./images/home/experiance-luxury.jpg" width="600" alt="">
-    </a>
-  </div>
-
-
-
-
-
-
-
-
-  <br><br><br><br><br>
-
-
-
-
-
-
-
-
-  <main class="main-content has-text-centered mt-6 letter-spacing-1">
-
-    <div style="max-width: 500px; margin: 0 auto;" class="my-6">
-
-      <h1 class="is-size-3 has-text-weight-bold" style="line-height: 1;">Still have questions?</h1>
-      <h1 class="is-size-3 has-text-weight-bold" style="line-height: 1;">Just Ask.</h1>
-      <br>
-      <p class="is-size-6 light-gray">
-        Our customer support is available 24/7 to help you out with any problemes you may have.
-      </p>
-      <a href="#" class="has-text-success">Send us a message</a>
-    </div>
-
-  </main>
-
-
-  <br><br><br><br>
 
   <!-- Main Content End -->
 
-
-  <footer class="footer pb-6">
-    <div class="header pb-6" style="margin: 0 auto;">
-
-      <div class="columns">
-        <div class="column has-text-centered-mobile">
-          <img src="./images/logo/girar-logo.svg" alt="logo large" width="300" class="pr-5 mb-5">
-        </div>
-      </div>
-      <div class="columns">
-
-        <div class="column has-text-centered-mobile">
-          <p class="is-size-6 has-text-weight-bold py-2">&copy; 2022 GIRAR APARTMENTS</p>
-          <p class="is-size-7 gray">Addis Ababa, Ethiopia</p>
-          <p class="is-size-7 gray">All Rights Reserved</p>
-        </div>
-
-        <div class="column is-4 has-text-centered-mobile">
-          <div class="columns px-2 is-mobile">
-            <div class="column is-size-4-mobile footer-links">
-              <h1 class="is-size-7 has-text-weight-bold">LINKS</h1>
-              <a href="#" class="has-text-dark">
-                <p class="is-size-7 py-2 underline gray">Home</p>
-              </a>
-              <a href="#location" class="has-text-dark">
-                <p class="is-size-7 underline gray">Location</p>
-              </a>
-              <a href="http://360.girarapartments.com/" target="_blank" class="has-text-dark">
-                <p class="is-size-7 py-2 underline gray">3D Tour</p>
-              </a>
-            </div>
-            <div class="column is-size-4-mobile footer-links">
-              <h1 class="is-size-7 has-text-weight-bold">Social Media</h1>
-              <a href="https://www.facebook.com/girarapartments" class="has-text-dark">
-                <p class="is-size-7 py-2 underline gray">Facebook</p>
-              </a>
-              <a href="https://www.instagram.com/girarapartments/" class="has-text-dark">
-                <p class="is-size-7  underline gray">Instagram</p>
-              </a>
-              <!-- <a href="#"><p class="is-size-6 py-2 underline">English</p></a>
-              <a href="#" class="has-text-dark"><p class="is-size-6 py-2 underline">Amahric</p></a> -->
-            </div>
+  <div data-scroll-section>
 
 
+    <footer class="footer">
+      <div class="header" data-scroll>
 
+        <div class="columns">
+          <div class="column has-text-centered-mobile">
+            <img src="./images/logo/girar-logo-text.svg" alt="logo large" width="150" class="pr-5 mb-5"
+              style="filter: brightness(100);">
+
+            <p class="has-text-white is-size-7">
+              Luxurious modern apartments for sale near Israel Embassy in Addis Ababa. We build with uncompromising
+              quality with your future in mind.
+            </p>
+
+            <br>
+            <p class="is-size-7 has-text-weight-bold py-2 has-text-white" style="line-height: 1;">&copy; 2022 GIRAR APARTMENTS</p>
+            <p class="is-size-7 has-text-white" style="line-height: 1;">Addis Ababa, Ethiopia</p>
+            <p class="is-size-7 has-text-white" style="line-height: 1;">All Rights Reserved</p>
           </div>
 
+          <div class="column has-text-centered-mobile">
+
+          </div>
+          <div class="column has-text-right has-text-centered-mobile">
+            <a href="#" class="remote-button" onclick="window.locomotive.scrollTo(document.getElementById('contact-info'))">
+              <img src="./images/home/icons/up-arrow.svg" width="70" alt="">
+            </a>
+          </div>
         </div>
 
-        <div class="column has-text-centered-mobile" id="contact">
 
 
-
-          <h1 class="is-size-7 has-text-weight-bold ">CONTACT INFORMATION</h1>
-
-          <a href="tel:+251901844448" class="is-size-7 has-text-dark py-2 pt-4">
-
-            <span class="gray">+(251) 901 84 44 48</span></a>
-          <br>
-          <a href="tel:+251901577775" class="is-size-7 has-text-dark py-2">
-
-            <span class="gray">+(251) 901 57 77 75</span></a>
-
-          <br>
-
-          <a href="mailto: sales@girarapartments.com" class="is-size-7 has-text-dark py-2">
-
-            <span class="gray">sales@girarapartments.com</span>
-          </a>
-
-
-          <!-- <h1 class="is-size-3 py-4 no-letter-spacing pt-6">Send us a message</h1>
-          <p class="is-size-6 serif">Ask us any question. We will write you back shortly.</p>
-
-          <div class="control has-icons-right my-5 has-text-right">
-            <input class="input footer-email-input is-light mb-4" type="email" placeholder="Email address">
-            <textarea name="message" class="textarea is-light" placeholder="write your message here..." id="" cols="30"
-              rows="5"></textarea>
-            <button class="button is-warning is-hoverable has-text-weight-bold p-6 mt-4"
-              style="width: 100%;">Send</button>
-          </div> -->
-        </div>
 
 
       </div>
 
+    </footer>
+
+
+
+    <div class="is-hidden-mobile" data-scroll-section style="height: 450px;">
 
     </div>
 
-  </footer>
+
+    <script src="./js/script-nav.js"></script>
+
+    <!-- Get minor updates and patch fixes within a major version -->
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/bigpicture/BigPicture.min.js"></script>
+    <script src="./vendor/locomotive-scroll/locomotive-scroll.min.js"></script>
+
+
+    <script>
+
+
+      try {
+        const dataScrollContainer = document.querySelector(
+          '[data-scroll-container]',
+        )
+
+        if (!dataScrollContainer) {
+          console.warn(
+            'locomotive-scroll: [data-scroll-container] dataset was not found. You likely forgot to add it which will prevent Locomotive Scroll to work.',
+          )
+        }
+
+        window.locomotive = new LocomotiveScroll({
+          el: dataScrollContainer ?? undefined,
+          smooth: true,
+        })
+      } catch (error) { }
 
 
 
 
+      function openGallery() {
+        BigPicture({
+          el: document.getElementById("gallery"),
+          gallery: '#image_container',
+          loop: true,
+          allowfullscreen: true
+        })
+      }
+    </script>
+
+    <!-- <script src="./vendor/gsap/minified/gsap.min.js"></script> -->
+    <!-- <script src="./vendor/gsap/minified/ScrollTrigger.min.js"></script> -->
 
 
-  <script src="./js/script-nav.js"></script>
+    <script src="./vendor/owl-carousel/owl.carousel.js"></script>
+
+    <!-- <script src="./js/script-animation.js"></script> -->
+
+    <!-- <script src="./vendor/bigpicture/BigPicture.min.js"></script> -->
+
+    <!-- <script src="./js/bigpicture.js"></script> -->
+
+    <script>
 
 
 
-  <script src="./vendor/gsap/minified/gsap.min.js"></script>
-  <script src="./vendor/gsap/minified/ScrollTrigger.min.js"></script>
+      $(document).ready(function () {
+        $("#main-slider").owlCarousel({
+          loop: true,
+          margin: 10,
+          // nav: true,
 
-  <script src="./js/script-animation.js"></script>
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          drag: false,
+          autoplaySpeed: 2000,
+          autoplay: 1,
+          responsive: {
+            0: {
+              items: 1
+            },
+          }
+        });
 
-  <!-- <script src="./vendor/bigpicture/BigPicture.min.js"></script> -->
+        $("#main-slider2").owlCarousel({
+          loop: true,
+          margin: 10,
+          // nav: true,
 
-  <!-- <script src="./js/bigpicture.js"></script> -->
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          drag: false,
+          autoplaySpeed: 2000,
+          autoplay: 1,
+          responsive: {
+            0: {
+              items: 1
+            },
+          }
+        });
 
-  <script>
-    document.body.classList.add("loaded")
-  </script>
+        $("#design-slider").owlCarousel({
+          loop: true,
+          margin: 10,
+          // nav: true,
+          dots: true,
+          pagination: true,
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          drag: false,
+          autoplaySpeed: 2000,
+          autoplay: 1,
+          responsive: {
+            0: {
+              items: 1
+            },
+          }
+        });
+
+        $("#gallery").owlCarousel({
+          margin: 2,
+          // // loop: true,
+          // nav: true,
+          // drag: true,
+          responsive: {
+
+            0: {
+              items: 1
+            },
+            // breakpoint from 480 up
+            480: {
+              items: 1
+            },
+            // breakpoint from 768 up
+            768: {
+              items: 1
+            },
+            1024: {
+              items: 3
+            }
+          }
+        });
+
+        $("#gallery2").owlCarousel({
+          margin: 2,
+          // // loop: true,
+          // nav: true,
+          // drag: true,
+          responsive: {
+
+            0: {
+              items: 1
+            },
+            // breakpoint from 480 up
+            480: {
+              items: 1
+            },
+            // breakpoint from 768 up
+            768: {
+              items: 1
+            },
+            1024: {
+              items: 3
+            }
+          }
+        });
+      });
+
+      document.getElementById("living-room").classList.toggle("zoomed")
+      setInterval(() => {
+        document.getElementById("living-room").classList.toggle("zoomed")
+      }, 5000);
+
+      const wait = (delay = 0) =>
+        new Promise(resolve => setTimeout(resolve, delay));
+
+      document.addEventListener('DOMContentLoaded', () =>
+        wait(1000).then(() => {
+          document.getElementById("pageloader").classList.remove("is-active");
+          document.getElementsByTagName("body")[0].classList.add("loaded");
+        }));
+    </script>
+
+
+    <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js"
+      crossorigin="anonymous"></script>
+    <script nomodule
+      src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

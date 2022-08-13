@@ -6,7 +6,22 @@ tl.staggerFrom('.reveal span', 1.5, { opacity: 0, y: 320, ease: "power1.inOut" }
 tl.restart();
 
 
-document.getElementById("pageloader").classList.remove("is-active");
+// var s = new Siema({
+//   selector: '.siema',
+//   duration: 500,
+//   easing: 'ease-out',
+//   perPage: 1,
+//   startIndex: 0,
+//   draggable: false,
+//   multipleDrag: true,
+//   threshold: 20,
+//   loop: true,
+// });
+
+// setInterval(() => {
+//   s.next();
+// }, 5000);
+
 
 
 let timelineApartments = gsap.timeline({

@@ -2,7 +2,6 @@ var theNavigation = document.getElementById("nav")
 var theNavigationContainer = document.getElementById("nav-container")
 var spacer = document.getElementById("spacer")
 var stuck = "is-fixed-top";
-var theHeader = document.getElementById("hero").offsetHeight
 
 window.onscroll = function() {myFunction()};
 

@@ -1,17 +1,44 @@
 .main-banner {
   height: 100vh;
-  background-image: url("../images/home/main-banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  margin-top: -80px;
+  position: relative;
+}
+.main-banner .owl-carousel {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main-banner .slider-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+}
+
+.remote-button img {
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+}
+
+.remote-button * {
+  transition: all 0.5s ease-in-out;
+}
+
+.remote-button:hover img {
+  transition: all 0.5 ease-in-out;
+  transform: scale(1.1);
 }
 
 .reveal {
   position: relative;
   overflow: hidden;
-  height: 4rem;
+  min-width: 500px;
+  height: 2.5rem;
 }
 .reveal span {
   position: absolute;
@@ -20,7 +47,7 @@
 .reveal-2 {
   position: relative;
   overflow: hidden;
-  height: 4rem;
+  height: 2.5rem;
 }
 .reveal-2 span {
   position: absolute;
@@ -29,20 +56,46 @@
 .reveal-3 {
   position: relative;
   overflow: hidden;
-  height: 4rem;
+  height: 2.5rem;
 }
 .reveal-3 span {
   position: absolute;
 }
 
-.view {
+.description-home {
+  background-color: #10271c;
+}
+
+.view-section {
   position: relative;
   overflow: hidden;
   height: 100vh;
 }
-.view .panorama-view,
-.view .living-room {
+.view-section .view {
   position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+.view-section .view .panorama-view,
+.view-section .view .living-room {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 4s ease-in-out;
+  filter: brightness(1.1);
+}
+.view-section .view .living-room.zoomed {
+  transform-origin: center center;
+  transform: scale(1.2);
+  filter: brightness(0.8);
+}
+.view-section .main-content {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
   top: 0;
   left: 0;
 }
@@ -81,6 +134,15 @@
   position: absolute;
 }
 #mapPath path {
+  stroke-dasharray: 2320;
+  stroke-dashoffset: 0;
+}
+
+#labels {
+  display: block;
+  position: absolute;
+}
+#labels path {
   stroke-dasharray: 2320;
   stroke-dashoffset: 0;
 }
@@ -144,26 +206,36 @@ p.light-gray {
 
   .city-center {
     position: absolute;
-    top: 65%;
+    top: 10%;
     left: 10%;
   }
 }
-:root {
-  --lb3-widget-icon: url("https://girarapartments.com/images/home/main-banner-mobile.jpg");
-}
-
 @media screen and (max-width: 768px) {
-  .main-banner {
-    height: calc(100vh - 70px);
-    background-color: black;
-    background-image: var(--lb3-widget-icon);
-    background-size: cover;
-  }
-
   .reveal,
 .reveal-2,
 .reveal-3 {
-    height: 2.8rem;
+    height: 2rem;
+  }
+
+  .stages .column .is-flex {
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  .home-content {
+    position: relative;
+  }
+  .home-content .column {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .home-content .column:last-child {
+    padding-bottom: 8rem;
   }
 
   .view {
@@ -184,6 +256,11 @@ p.light-gray {
     min-width: 70vh !important;
     left: 50% !important;
     margin-left: -50% !important;
+  }
+
+  .owl-carousel div img, .owl-carousel2 div img {
+    height: 100vh !important;
+    width: 50vh;
   }
 
   .girar-calltoaction-phone {
