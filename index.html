@@ -288,9 +288,10 @@
             <br>
             <h1 class="is-size-4 py-4  has-text-white is-uppercase has-text-weight-bold" style="line-height: 1;"><span
                 class="has-text-weight-normal is-size-6 light-gray">Each with 3 Bedrooms and <br
-                  class="is-hidden-tablet">an area of </span><br>241 <span
-                class="has-text-weight-normal is-size-5  has-text-white">&</span>
-              252 Sqm. </h1>
+                  class="is-hidden-tablet">an area of </span><br>
+                  <!-- 241 <span
+                class="has-text-weight-normal is-size-5  has-text-white">&</span> -->
+              210 Sqm. </h1>
           </div>
         </div>
 
@@ -392,8 +393,8 @@
     <div class="columns is-align-items-center" style="height: 100vh;">
       <div class="column has-text-centered">
         <br><br><br>
-        <a href=""><img data-scroll data-scroll-speed="2" width="450" src="./images/home/Video Presentation.jpg"
-            alt=""></a>
+        <img id="girar-video" style="cursor: pointer;" onclick="openVideo()" data-scroll data-scroll-speed="2" width="450" src="./images/home/Video Presentation.jpg"
+            alt="Video">
 
         <!-- <h1 data-scroll data-scroll-speed="4" class="is-size-2 display has-text-center has-text-left-mobile p-5">Video
           Tour</h1> -->
@@ -469,21 +470,23 @@
 
       <div class="column has-text-centered">
         <div class="is-flex has-text-left">
-          <img src="./images/home/icons/in-progress-big.svg" class="mr-4" width="50" alt="">
+          <!-- <img src="./images/home/icons/in-progress-big.svg" class="mr-4" width="50" alt=""> -->
+          <img src="./images/home/icons/check-big.svg" class="mr-4" width="50" alt="">
           <div>
             <p class="gray is-size-7 has-text-weight-bold" style="line-height: 1;">3rd stage</p>
             <h1 class="is-size-5 has-text-weight-bold" style="line-height: 1;">Finishing</h1>
-            <p class="gray is-size-7" style="line-height: 1;">In Progress</p>
+            <p class="gray is-size-7" style="line-height: 1;">Completed</p>
           </div>
         </div>
       </div>
       <div class="column has-text-centered">
         <div class="is-flex has-text-left">
-          <img src="./images/home/icons/done-big.svg" class="mr-4" width="50" alt="">
+          <!-- <img src="./images/home/icons/done-big.svg" class="mr-4" width="50" alt=""> -->
+          <img src="./images/home/icons/check-big.svg" class="mr-4" width="50" alt="">
           <div>
             <p class="gray is-size-7 has-text-weight-bold" style="line-height: 1;">4th stage</p>
             <h1 class="is-size-5 has-text-weight-bold" style="line-height: 1;">Project Done</h1>
-            <p class="gray is-size-7" style="line-height: 1;">Not Completed</p>
+            <p class="gray is-size-7" style="line-height: 1;">Completed</p>
           </div>
         </div>
       </div>
@@ -529,13 +532,13 @@
 
 
             <div>
-              <img src="./images/home/architecture/living-room.jpg" alt="Living Room">
+              <img src="./images/home/gallery/desktop/1.jpg" alt="Living Room">
             </div>
             <div>
-              <img src="./images/home/architecture/dining-area.jpg" alt="Dining Area">
+              <img src="./images/home/gallery/desktop/4.jpg" alt="Traditional Kitchen">
             </div>
             <div>
-              <img src="./images/home/architecture/master-bedroom.jpg" alt="Master Bedroom">
+              <img src="./images/home/gallery/desktop/5.jpg" alt="Dining Area">
             </div>
 
           </div>
@@ -701,7 +704,7 @@
         <p class="light-gray">
           Gross Area
         </p>
-        <h6 class="has-text-weight-bold">241 m<sup>2</sup></h6>
+        <h6 class="has-text-weight-bold">210 m<sup>2</sup></h6>
         <p class="light-gray">
           Storage
         </p>
@@ -726,7 +729,7 @@
         <p class="light-gray">
           Gross Area
         </p>
-        <h6 class="has-text-weight-bold">252 m<sup>2</sup></h6>
+        <h6 class="has-text-weight-bold">210 m<sup>2</sup></h6>
         <p class="light-gray">
           Storage
         </p>
@@ -1074,7 +1077,7 @@
             </p>
 
             <br>
-            <p class="is-size-7 has-text-weight-bold py-2 has-text-white" style="line-height: 1;">&copy; 2022 GIRAR APARTMENTS</p>
+            <p class="is-size-7 has-text-weight-bold py-2 has-text-white" style="line-height: 1;">&copy; 2024 GIRAR APARTMENTS</p>
             <p class="is-size-7 has-text-white" style="line-height: 1;">Addis Ababa, Ethiopia</p>
             <p class="is-size-7 has-text-white" style="line-height: 1;">All Rights Reserved</p>
           </div>
@@ -1134,6 +1137,14 @@
 
 
 
+      function openVideo() {
+        BigPicture({
+          el: document.getElementById("girar-video"),
+          vidSrc: 'https://girarapartments.com/downloads/girar_website_video.mp4',
+          loop: true,
+          allowfullscreen: true
+        })
+      }
 
       function openGallery() {
         BigPicture({
